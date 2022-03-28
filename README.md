@@ -1,4 +1,4 @@
-# CNN_OpticalFlow
+# DeepBubbleVelocimetry
 
 This is a project of Multiphase flow & Flow visualization Lab for bubble detection and mask extraction. The purpose of the project is to automatically extract bubble mask of experimental images from various experimental conditions using deep learning model. More information can be found in the paper (Kim & Park, 2021).
 
