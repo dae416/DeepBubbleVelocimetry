@@ -1,6 +1,6 @@
-# DeepBuubleVelocimetry for Bubble velocity evaluation
+# DeepBubbleVelocimetry for evaluating the bubble velocity field 
 
-This is a project of [Multiphase flow & Flow visualization Lab](https://mffv.snu.ac.kr/). The purpose of the project is to obtain the bubble velocity field from experimental images using deep learning model. More information can be found in the paper (Choi et al. 2022 (to be published)). 
+This is a project of [Multiphase flow & Flow visualization Lab](https://mffv.snu.ac.kr/). The purpose of the project is to obtain the bubble velocity field from experimental images using CNN-based optical flow model. More information can be found in the paper (Choi et al. 2022 (to be published)). 
 
 The codes are based on [PWC_Net](https://github.com/NVlabs/PWC-Net) with the pre-trained weights. 
 
