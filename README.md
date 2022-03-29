@@ -14,7 +14,7 @@ The repository includes:
 - Source code of implementation of PWC-Net based on the finetuned weights.
 - Source code to generate the velocity field (techplot file) and its contour (png).
 
-![Mask Extraction Example](assets/sample.gif)
+![Mask Extraction Example](assets/sample_movie.gif)
 
 
 ## Tested environment
