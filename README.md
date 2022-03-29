@@ -1,6 +1,6 @@
 # DeepBubbleVelocimetry
 
-This is a project of Multiphase flow & Flow visualization Lab for bubble detection and mask extraction. The purpose of the project is to automatically extract bubble mask of experimental images from various experimental conditions using deep learning model. More information can be found in the paper (Kim & Park, 2021).
+This is a project of [**Multiphase flow & Flow visualization Lab**](https://mffv.snu.ac.kr/) for bubble detection and mask extraction. The purpose of the project is to automatically extract bubble mask of experimental images from various experimental conditions using deep learning model. More information can be found in the paper (Kim & Park, 2021).
 
 The codes are based on Matterport Mask R-CNN implementation, using ResNet-101 as the backbone and applied transfer learning from pre-trained COCO weights.
 
