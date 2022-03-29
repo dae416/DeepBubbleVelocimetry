@@ -30,11 +30,10 @@ This code was tested on the below environment.
 
 
 ## Preparing the input
-Prepare images (JPG or PNG or TIF) '_###' 
+Prepare two consecutive bubble images (format of JPG or PNG or TIF) and one mask image.
 
-- For example, folder_001, folder_002 ... 
-- Your `path/to/image` become `.../folder`
-
+- For example, Img_0001.png, Img_0002.png, and msk_0001.png 
+- 
 
 ## How to test your own bubble image/video
 1. Clone this repository
@@ -46,20 +45,6 @@ Prepare images (JPG or PNG or TIF) '_###'
     ```bash
     python3 setup.py install
     ``` 
-1. Download trained weights (mask_rcnn_bubble.h5) from the [link](https://drive.google.com/file/d/1BSi4djQtR0QKYEp-nFGsGi0e6UVEx5ug/view?usp=sharing).
+1. Download trained weights (mask_rcnn_bubble.h5) from the [link](https://drive.google.com/file/d/1WTe6k3u0NsHwSko8sqna02gP3pJS6R5d/view?usp=sharing).
 
-1. Run bubble detection script **in `bubble/` directory** to visualize color mask
-   (supports only 3-channel jpg image or video)
-    ```bash
-    bubble$ python3 bubble.py splash --weights=path/to/mask_rcnn_bubble.h5 --image=path/to/image
-    ```
-    for the video:
-    ```bash
-    bubble$ python3 bubble.py splash --weights=path/to/mask_rcnn_bubble.h5 --video=path/to/video
-    ```
-    
-1. Run bubble detection script **in `bubble/` directory** to extract logical mask and bubble properties
-   (JPG or PNG or TIF images)
-    ```bash
-    bubble$ python3 bubble.py detect --weights=path/to/mask_rcnn_bubble.h5 --image=path/to/image --results=/path/to/results --folder_num_start=int --folder_num=number of folders --confidence=0.5 to 0.99
-    ```
+1. Run prediction script (CNN_OpticalFlow.ipynb) **in `Code/` directory** to obtain the velocity field (supports only 3-channel jpg image).
