@@ -38,7 +38,12 @@ This code was tested on the below environment.
 
 ## Preparing the input
 Prepare two consecutive bubble images (format of JPG or PNG or TIF) and one mask image.
-- For example, Img_0001.png, Img_0002.png, and msk_0001.png (square size is recommended, e.g., 300 x 300 pixels)
+- For example, Img_0001.png, Img_0002.png, and msk_0001.png 
+- (Here, the square size is recommended, e.g., 300 x 300 pixels)
+
+![Mask Extraction Example](Sample Images/Img_0001.png)
+![Mask Extraction Example](Sample Images/Img_0002.png)
+![Mask Extraction Example](Sample Images/msk_0001.png)
 
 
 ## How to test your own bubble image/video
