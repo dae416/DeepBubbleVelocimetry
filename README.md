@@ -46,4 +46,7 @@ Prepare two consecutive bubble images (format of JPG or PNG or TIF) and one mask
 
 
 ## Appendix. Generating the synthetic bubble images
-- 
+- (it will be soon uploaded)
+
+
+Any comments/questions are welcome. please contact to dae416@snu.ac.kr
