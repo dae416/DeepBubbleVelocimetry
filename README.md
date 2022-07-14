@@ -31,9 +31,8 @@ This code was tested on the below environment.
 
 ## Preparing the input
 Prepare two consecutive bubble images (format of JPG or PNG or TIF) and one mask image.
+- For example, Img_0001.png, Img_0002.png, and msk_0001.png (square size is recommended, e.g., 300 x 300 pixels)
 
-- For example, Img_0001.png, Img_0002.png, and msk_0001.png 
-- 
 
 ## How to test your own bubble image/video
 1. Clone this repository
@@ -41,6 +40,10 @@ Prepare two consecutive bubble images (format of JPG or PNG or TIF) and one mask
    ```bash
    pip3 install -r requirements.txt
    ```
-1. Download trained weights (mask_rcnn_bubble.h5) from the [link](https://drive.google.com/file/d/1WTe6k3u0NsHwSko8sqna02gP3pJS6R5d/view?usp=sharing).
+1. Download trained weights from this [link](https://drive.google.com/file/d/1WTe6k3u0NsHwSko8sqna02gP3pJS6R5d/view?usp=sharing).
 
 1. Run prediction script (CNN_OpticalFlow.ipynb) **in `Code/` directory** to obtain the velocity field (supports only 3-channel jpg image).
+
+
+## Appendix. Generating the synthetic bubble images
+- 
