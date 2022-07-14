@@ -45,7 +45,7 @@ Prepare two consecutive bubble images (format of JPG or PNG or TIF) and one mask
 1. Run prediction script (CNN_OpticalFlow.ipynb) **in `Code/` directory** to obtain the velocity field (supports only 3-channel jpg image).
 
 
-## Appendix. Generating the synthetic bubble images
+## Generating the synthetic bubble images
 - Code is attached in the "SyntheticBubbleImage" folder.
 - The density, velocity, magnitude of deformation (or the light noise) can be controlled using code.
 - Output of the code is as follows: Two consecutive bubble images and one flow file.
