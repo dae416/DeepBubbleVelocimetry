@@ -52,4 +52,5 @@ Prepare two consecutive bubble images (format of JPG or PNG or TIF) and one mask
 
 ![Synthetic Bubble Image Example](SyntheticBubbleImage/BubbleGen_example.gif)
 
-Any comments/questions are welcome. please contact to dae416@snu.ac.kr
+Any comments/questions are welcome.
+Please contact to dae416@snu.ac.kr
