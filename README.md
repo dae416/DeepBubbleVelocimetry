@@ -14,10 +14,14 @@ The repository includes:
 - Source code of implementation of PWC-Net based on the finetuned weights.
 - Source code to generate the velocity field (techplot file) and its contour (png).
 
-The examples of the result is shown below
-
+The examples of the result is shown below:
+- Application for bubble plume with various void fractions
 ![Mask Extraction Example](assets/sample_movie.gif)
+
+- Comparison with the PTV and CNN-based optical flow for dense bubble plume
 ![Mask Extraction Example](assets/sample_movie_2.gif)
+
+- Effect of the training
 ![Mask Extraction Example](assets/sample_movie_3.gif)
 
 ## Tested environment
