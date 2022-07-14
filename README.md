@@ -6,7 +6,7 @@ The codes are based on [PWC_Net](https://github.com/NVlabs/PWC-Net) with the pre
 
 The output of the model is as follows:
 
-- velocity field (techplot file) 
+- velocity field (two dimensional array in techplot format, or it can be read through wordpad or text in Window OS)
 - velocity field contour (png)
 
 The repository includes:
@@ -46,7 +46,10 @@ Prepare two consecutive bubble images (format of JPG or PNG or TIF) and one mask
 
 
 ## Appendix. Generating the synthetic bubble images
-- (it will be soon uploaded)
+- Code is attached in the "SyntheticBubbleImage" folder.
+- The density, velocity, magnitude of deformation (or the light noise) can be controlled using code.
+- Output of the code is as follows: Two consecutive bubble images and one flow file.
+
 ![Synthetic Bubble Image Example](SyntheticBubbleImage/BubbleGen_example.gif)
 
 Any comments/questions are welcome. please contact to dae416@snu.ac.kr
