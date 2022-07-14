@@ -21,8 +21,7 @@ The examples of the result is shown below:
 - Comparison with the PTV and CNN-based optical flow for dense bubble plume
 ![Mask Extraction Example](assets/sample_movie_2.gif)
 
-- Effect of the training
-
+- Effect of the training (it is seen that the horizontal vectors from the weakly trained model are inaccurate)
 ![Mask Extraction Example](assets/sample_movie_3.gif)
 
 ## Tested environment
