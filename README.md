@@ -22,6 +22,7 @@ The examples of the result is shown below:
 ![Mask Extraction Example](assets/sample_movie_2.gif)
 
 - Effect of the training
+
 ![Mask Extraction Example](assets/sample_movie_3.gif)
 
 ## Tested environment
