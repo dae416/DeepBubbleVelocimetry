@@ -48,15 +48,15 @@ Prepare two consecutive bubble images (format of JPG or PNG or TIF) and one mask
 
 
 ## How to test your own bubble image/video
-1. Clone this repository
+1. Clone this repository (Git LFS required: `git lfs install` before cloning)
 1. Install dependencies (If compatibility issue occurs, please refer to the original PWC-Net link)
-1. Download trained weights from this [link](https://drive.google.com/file/d/1WTe6k3u0NsHwSko8sqna02gP3pJS6R5d/view?usp=sharing).
-
 1. Run prediction script (CNN_OpticalFlow.ipynb) **in `Code/` directory** to obtain the velocity field (supports only 3-channel jpg image).
+
+> The trained weights (`DBV_MFFV`) are stored in the `Weights/` folder via Git LFS and will be downloaded automatically when you clone the repository.
 
 
 ## Generating the synthetic bubble images
-- Code is attached in the "SyntheticBubbleImage" folder.
+- Code is attached in the "SyntheticBubbleImage" folder (`BimgGen.ipynb` + `dh_synimagegen9.py`).
 - The density, velocity, magnitude of deformation (or the light noise) can be controlled using code.
 - Output of the code is as follows: Two consecutive bubble images and one flow file (visualized by color contour below).
 
