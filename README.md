@@ -16,13 +16,13 @@ The repository includes:
 
 The examples of the result is shown below:
 - Application for bubble plume with various void fractions
-![Example1](assets/sample_movie.gif)
+<img src="assets/sample_movie.gif" width="100%" alt="Example1">
 
 - Comparison with the PTV and CNN-based optical flow for dense bubble plume
-![Example2](assets/sample_movie_2.gif)
+<img src="assets/sample_movie_2.gif" width="100%" alt="Example2">
 
 - Effect of the training (it is seen that the horizontal vectors from the weakly trained model are inaccurate)
-![Example3](assets/sample_movie_3.gif)
+<img src="assets/sample_movie_3.gif" width="100%" alt="Example3">
 
 ## Tested environment
 This code was tested on the below environment.
@@ -42,9 +42,7 @@ Prepare two consecutive bubble images (format of JPG or PNG or TIF) and one mask
 - For example, Img_0001.png, Img_0002.png, and msk_0001.png 
 - (Here, the square size is recommended, e.g., 300 x 300 pixels)
 
-![Example4](SampleImages/Img_0001.png)
-![Example5](SampleImages/Img_0002.png)
-![Example6](SampleImages/msk_0001.png)
+<img src="SampleImages/Img_0001.png" width="32%"><img src="SampleImages/Img_0002.png" width="32%"><img src="SampleImages/msk_0001.png" width="32%">
 
 
 ## How to test your own bubble image/video
@@ -106,9 +104,9 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 | `drawing()` | Place N bubbles on background with displacement → image pair + flow field | `BimgGen.ipynb` |
 | `drawing_polygon()` | Add thin dark lines and wide bright diagonal bands (light sheet effect) | `BimgGen.ipynb` |
 
-![Synthetic Bubble Image Example](SyntheticBubbleImage/BubbleGen_example.gif)
+<img src="SyntheticBubbleImage/BubbleGen_example.gif" width="100%" alt="Synthetic Bubble Image Example">
 
-## Getting help with AI assistants (e.g. ChatGPT)
+## Getting help with AI assistants (e.g. Claude)
 
 Copy the following as a starting prompt to give the AI context about this project:
 
@@ -128,5 +126,4 @@ Weights on Zenodo: https://doi.org/10.5281/zenodo.20404053
 [your question here]
 ```
 
-Any comments/questions are welcome.
-Please contact to dae416@snu.ac.kr
+Please contact to dchoi319@gatech.edu
