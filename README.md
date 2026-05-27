@@ -48,9 +48,40 @@ Prepare two consecutive bubble images (format of JPG or PNG or TIF) and one mask
 
 
 ## How to test your own bubble image/video
+
+### Option A: Docker (recommended, no environment setup required)
+
+```bash
+# 1. Install Git LFS and clone
+git lfs install
+git clone https://github.com/dae416/DeepBubbleVelocimetry.git
+cd DeepBubbleVelocimetry
+
+# 2. Build Docker image
+docker build --platform linux/amd64 -t dbv .
+
+# 3. Run prediction (place your images in SampleImages/ first)
+docker run --platform linux/amd64 --rm \
+  -v $(pwd):/workspace \
+  dbv \
+  python -c "
+import os, sys
+sys.path.insert(0, '/workspace/Code')
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+# ... or launch Jupyter: jupyter notebook --ip=0.0.0.0 --allow-root
+"
+```
+
+> **Apple Silicon (M1/M2/M3) users:** Use Rosetta 2 emulation for best compatibility:
+> ```bash
+> colima start --arch x86_64 --vm-type vz --vz-rosetta
+> ```
+
+### Option B: Native environment (GPU recommended)
+
 1. Clone this repository (Git LFS required: `git lfs install` before cloning)
 1. Install dependencies (If compatibility issue occurs, please refer to the original PWC-Net link)
-1. Run prediction script (CNN_OpticalFlow.ipynb) **in `Code/` directory** to obtain the velocity field (supports only 3-channel jpg image).
+1. Run prediction script (`CNN_OpticalFlow.ipynb`) **in `Code/` directory** to obtain the velocity field.
 
 > The trained weights (`DBV_MFFV`) are stored in the `Weights/` folder via Git LFS and will be downloaded automatically when you clone the repository.
 
