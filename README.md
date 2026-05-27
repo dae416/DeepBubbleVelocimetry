@@ -77,6 +77,8 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 > colima start --arch x86_64 --vm-type vz --vz-rosetta
 > ```
 
+> **Platform compatibility:** Tested on Apple Silicon (M1/M2/M3) with Rosetta 2. Works on x86_64 Linux/Windows (CPU/GPU). Windows ARM is untested and may not work.
+
 ### Option B: Native environment (GPU recommended)
 
 1. Clone this repository (Git LFS required: `git lfs install` before cloning)
@@ -84,6 +86,8 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 1. Run prediction script (`CNN_OpticalFlow.ipynb`) **in `Code/` directory** to obtain the velocity field.
 
 > The trained weights (`DBV_MFFV`) are stored in the `Weights/` folder via Git LFS and will be downloaded automatically when you clone the repository.
+> Alternatively, download directly from Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20404053.svg)](https://doi.org/10.5281/zenodo.20404053)
+> Unzip `Weights.zip` into the repository root to use.
 
 
 ## Generating the synthetic bubble images
@@ -91,7 +95,38 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 - The density, velocity, magnitude of deformation (or the light noise) can be controlled using code.
 - Output of the code is as follows: Two consecutive bubble images and one flow file (visualized by color contour below).
 
+### Code structure
+
+| Function | Role | File |
+|----------|------|------|
+| `create_synimageparameters()` | Generate background particle positions, velocities, and sizes | `dh_synimagegen9.py` |
+| `generate_particle_image()` | Render particle background image | `dh_synimagegen9.py` |
+| `gen_bgimage()` | Create background image pair (particles + brightness + elastic deformation) | `BimgGen.ipynb` |
+| `rand_obj()` | Generate a single bubble (triple ellipse + elastic deformation) | `BimgGen.ipynb` |
+| `drawing()` | Place N bubbles on background with displacement → image pair + flow field | `BimgGen.ipynb` |
+| `drawing_polygon()` | Add thin dark lines and wide bright diagonal bands (light sheet effect) | `BimgGen.ipynb` |
+
 ![Synthetic Bubble Image Example](SyntheticBubbleImage/BubbleGen_example.gif)
+
+## Getting help with AI assistants (e.g. ChatGPT)
+
+Copy the following as a starting prompt to give the AI context about this project:
+
+```
+I'm using DeepBubbleVelocimetry (https://github.com/dae416/DeepBubbleVelocimetry),
+a CNN-based optical flow tool for measuring bubble velocity fields.
+It uses a fine-tuned PWC-Net model (TensorFlow 1.14, Python 3.7) with pre-trained
+weights (DBV_MFFV) included via Git LFS.
+
+The recommended way to run it is via Docker:
+  docker build --platform linux/amd64 -t dbv .
+  docker run --platform linux/amd64 --rm -v $(pwd):/workspace dbv [command]
+
+Paper: Choi et al. 2022, Scientific Reports, https://doi.org/10.1038/s41598-022-16145-y
+Weights on Zenodo: https://doi.org/10.5281/zenodo.20404053
+
+[your question here]
+```
 
 Any comments/questions are welcome.
 Please contact to dae416@snu.ac.kr
